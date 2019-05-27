@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<style>
+    h1 {
+        color: rgb(0, 183, 255);
+    }
+    
+    .intro {
+        color: red;
+    }
+    
+    #apple {
+        color: red;
+        border: 0
+    }
+    
+    #strawberry {
+        color: pink;
+        border: 0
+    }
+    /* pseoudo element, stying parts of element, double double dot */
+    p::first-line{
+        color:brown
+    }
+    p::first-letter{
+        color: pink;
+        background-color: greenyellow
+    }
+    /* , pseudo class styling class single double dot */
+    .link:hover{
+        
+    }
+
+    /* attribute */
+    input[type='radio']{
+        background-color:pink
+    }
+
+    /* trying to override that one style, you may be tempted to add !important to your style. */
+    /* high specificity */
+    .large .navigation.navigation-large {
+        font-size: 2em;
+    }
+    /* will override the above */
+    /* need to override a rule marked as !important, which forces you to use another one */
+    .navigation{
+        font-size : 3em !important;
+    }
+
+    /* desktop styles */
+    body { 
+        font-size: 1em;
+    }
+
+    /* for mobile screen */
+    @media only screen and (min-width: 768px) {
+        body {
+                font-size: 1.5em;
+        }
+    }
+
+    /* @supports. is for supporting browser ets you specify declarations that depend on a browser's support for one or more specific   */
+    @supports (display: grid) {
+        div {
+            display: grid;
+        }
+    }
+
+    /* alignItems, justifyContent -> following the axis of the rowDirection */
+    /* Flexbox is a very useful layout tool, especially for smaller areas within the site. Its main features are to align items in horizontal or vertical axes, space them out automatically, invert the order in which they’re displayed, along with a few other layout options.
+       CSS Grid is more of a layout tool for the entire page. While Flexbox excels in laying out items along a single axis, Grid is better for layouts with both horizontal and vertical axes, i.e. grids! */
+    row-flex {
+        margin: 40px auto;
+        max-width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    row-grid{
+        margin: 40px auto;
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    /* styling in react 
+        1. inline css
+            const divStyle = {
+            color: 'blue',
+            backgroundImage: 'url(' + imgUrl + ')',
+            };
+            function HelloWorldComponent() {
+            return <div style={divStyle}>Hello World!</div>;
+        
+        2. css in js -> inline
+        3. styled components
+        4. Processors (sass, scc, less)
+
+     */
+
+</style>
+
+<body>
+    <h1 id="heading">Hello!</h1>
+    <h1 id="heading">I am learning about fundamental of javascript :)</h1>
+    <p>This variable is only for testing: </p>
+    <input id="apple" value='apple' disabled />
+    <input id="strawberry" value='strawberry' disabled />
+    <h1>This is test Response from API</h1>
+    <p>Learning how to request a data via ajax call</p>
+    <div>
+        <input id="userId" placeholder="Enter User Id" />
+        <button id="userDetails"> Get User Details </button>
+        <button id="repoList"> Get Repositories </button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dataType.js"></script>
+    <script src="statement.js"></script>
+    <script src="patterns.js"></script>
+    <script src="requestApi.js"></script>
+    <script src="this.js"></script>
+    <script src="filterArray.js"></script>
+    <script src="reactjsfundamental.js"></script>
+</body>
+
+</html>
