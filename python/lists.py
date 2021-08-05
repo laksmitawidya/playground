@@ -41,3 +41,69 @@ print(range(len(friends))) # [0,1,2]
 for i in range(len(friends)):
     friend = friends[i]
     print('Happy New Year:', friend)
+
+""" concatenating lists using + 
+    we can create a new list by adding two existing lists together
+"""
+
+a = [1, 2, 3]
+b = [4,5,6]
+c = a+b # [1,2,3,4,5,6]
+
+print(c)
+print(a)
+
+""" List can be sliced """
+t = [9,41,12,3,74,15]
+print(t[1:3])#[41,12] start from position 1, but not go up to 3
+print(t[3:]) #[3,74,15]
+
+x = list()
+type(x)
+dir(x)
+
+""" Building List from scrtch """
+stuff = list()
+stuff.append("book")
+stuff.append(99)
+print(stuff)
+stuff.append('cookie')
+print(stuff)
+
+## List checking
+some = [1,9,21,10,16]
+print(9 in some)
+print(15 in some)
+print(20 not in some)
+
+## Lists are in order
+friends = ['Joseph', 'Glenn', 'Sally']
+friends.sort()
+print(friends)
+print(friends[1])
+
+## Build in function and List
+nums = [3,41,12,9.12,9, 74.15]
+print(len(nums))
+print(max(nums))
+print(min(nums))
+print(sum(nums))
+print(sum(nums)/len(nums))
+
+numList = list()
+total = 0
+count = 0
+while True:
+    inp = input('Enter a number: ')
+    if inp == 'done': break
+    value = float(inp)
+    numList.append(value) # more memory but not only significant
+    # alternative without list
+    total = total + value
+    count = count+1
+    
+average = sum(numList) / len(numList)
+print('Average', average)
+
+
+
