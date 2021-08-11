@@ -114,3 +114,60 @@ print(findEmail)
 findPreciseEmail = re.findall('^From (\S+@\S+)', email)
 print(findPreciseEmail)
 
+meetingNote = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+findNotes = re.findall('\\S+@\\S+', meetingNote)
+print(findNotes)
+
+""" Example """
+findChar = email.find('@') #find index with @
+print(findChar)
+findWhiteSpace = email.find("  ", findChar) #find index with space
+print(findWhiteSpace)
+findHost = email[findChar+1: findWhiteSpace] #extract char from index @ +1 to space
+print(findHost)
+
+
+# Double split pattern
+words = email.split()
+print(words)
+emailResult = words[1]
+print(emailResult)
+piece = emailResult.split('@')
+print(piece)
+
+# The Regex version
+""" 
+'@([^ ]*' 
+- @ : look through the string until you find the sign
+- [^ ] : match non blank character
+- * : match many of them
+"""
+findGreedyMatching = re.findall('@([^ ]*)', email)
+print(findGreedyMatching)
+
+refineGreedyMatching = re.findall('^From .*@([^ ]*)', email)
+""" 
+^ : starting at the beginning of the line
+From: look string from
+ : followed by space
+.*: followed by any number of characters
+ """
+print(refineGreedyMatching)
+
+text = "X-DSPAM-Confidence: 0.8475"
+numlist = list()
+for word in text:
+    word = word.lstrip()
+    findNumber = re.findall('^X-DSPAM-Confidence: ([0-9.]+)', word)
+    if len(findNumber) !=1: 
+        continue
+    num = float(findNumber[0])
+    numlist.append(num)
+
+""" 
+If you want a special regex char tp just behave normally you prefix with "\"
+\$[0-9.]+
+\$ : a real dollar sign
+[0-9.] : a digit or period
++ at least one or more
+ """

@@ -24,6 +24,10 @@ This Repo is dedicated to self-learning in any language. This is part of my lear
 - Dictionary
 - Tuples
 - Regex
+- Network : setup & text processing
+- Web Scrapping
+- Web services: JSON & XML
+- Request an API
  
 # How to Run
 - Open this code using vscode
