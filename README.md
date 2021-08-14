@@ -28,6 +28,8 @@ This Repo is dedicated to self-learning in any language. This is part of my lear
 - Web Scrapping
 - Web services: JSON & XML
 - Request an API
+- Object and Class
+- Database (SQL)
  
 # How to Run
 - Open this code using vscode
@@ -37,5 +39,6 @@ This Repo is dedicated to self-learning in any language. This is part of my lear
 # Source
 1. Programming with Mosh (youtube channel)
 2. FreeCodeCamp
+3. Python for Everybody: PY4E https://www.py4e.com
 
 Happy learning and enjoy the process! :two_hearts: :muscle: :woman_technologist: :sparkles:
