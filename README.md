@@ -1,44 +1,28 @@
-# Playground
-This Repo is dedicated to self-learning in any language. This is part of my learning process with a lot of notes and practical examples. Hopefully this repo will always continue growing. Currently, I learn to speak Javascript & Python :cherry_blossom: :snake: :roller_coaster:
+# Code Playground
 
-# Getting Started
- I believe many of us can create a lot of cool apps and advanced features without knowing the fundamentals of the language itself. However, learning a language alone is not purely the aim of creating this repo, but I also want to deep dive into some web developments and data science. 
+Welcome to the Code Playground! This project is an interactive coding environment where you can write, execute, and experiment with various programming languages and technologies.
 
-# What I learn in Web Development? 
-- Data type
-- Modifying Array (filter, map, reduce)
-- Filter
-- HTML
-- CSS selector
-- JS design Pattern
-- Request API in JS
-- Statement
-- This 
-- ReactJS 
+## Table of Contents
+- [Features](#features)
+- [Supported Languages](#supported-languages)
+- [Getting Started](#getting-started)
 
-# What I learn in Python?
-- Data Type 
-- List
-- String and List
-- How to read a text file in python?
-- Dictionary
-- Tuples
-- Regex
-- Network : setup & text processing
-- Web Scrapping
-- Web services: JSON & XML
-- Request an API
-- Object and Class
-- Database (SQL)
- 
-# How to Run
-- Open this code using vscode
-- Website can be open by hitting the index.html
-- Python can be run by adding a python extension
+## Features
+- TBD
 
-# Source
-1. Programming with Mosh (youtube channel)
-2. FreeCodeCamp
-3. Python for Everybody: PY4E https://www.py4e.com
+## Supported Languages
+The Code Playground currently supports the following programming languages:
 
-Happy learning and enjoy the process! :two_hearts: :muscle: :woman_technologist: :sparkles:
+- React
+- NodeJS
+- Fundamental of JS and Python
+
+## Getting Started
+To get started with the Code Playground on your local machine, follow these steps:
+
+1. Clone the repository: `git clone git@github.com:laksmitawidya/playground.git`
+2. Install the necessary dependencies: `npm install`
+3. Start the development server: `lerna run start`
+4. Open your web browser and visit the local address that is displayed on the terminal, i.e: `http://127.0.0.1:5173/`
+
+Start coding and have fun!

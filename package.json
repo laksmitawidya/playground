@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "lerna": "^6.6.2"
+  },
+  "scripts": {
+    "start": "lerna run start",
+    "test": "lerna run test",
+    "diff": "lerna diff"
+  },
+  "name": "packages",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "prettier": "^2.8.8"
+  }
+}
