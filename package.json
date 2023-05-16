@@ -1,11 +1,14 @@
 {
+  "homepage": "https://laksmitawidya.github.io/playground",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "lerna": "^6.6.2"
   },
   "scripts": {
     "start": "lerna run start",
     "test": "lerna run test",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "build": "lerna run build"
   },
   "name": "packages",
   "workspaces": [

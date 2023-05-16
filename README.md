@@ -16,6 +16,7 @@ The Code Playground currently supports the following programming languages:
 - React
 - NodeJS
 - Fundamental of JS and Python
+- Typescript
 
 ## Getting Started
 To get started with the Code Playground on your local machine, follow these steps:
