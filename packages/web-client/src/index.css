@@ -1,69 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  /* Make sure all elements are above the background */
+  z-index: 1;
+  position: relative;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --black: #333333;
+  --white: #f5f5f5;
+  --background: var(--white);
+  --foreground: var(--black);
+  --transition: 0.5s ease;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Demo only styling */
+.container {
+  max-width: 750px;
+  margin: 20px auto;
 }
 
-body {
+p {
+  font-size: 20px;
+}
+
+img {
+  border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  transition: filter var(--transition);
+}
+
+ol {
+  padding: 0;
   margin: 0;
+}
+
+ol li {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+ol li img {
+  margin-right: 10px;
+}
+/* Demo only styling */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--foreground);
+  transition: color var(--transition);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+html::before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: var(--black);
+  transform: translateX(-100%);
+  transition: transform var(--transition);
+  z-index: 0;
+}
+
+.darkmode::before {
+  transform: translateX(0);
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.toggle-wrapper {
+  width: 130px;
+  display: block;
+  margin: auto; /* Centering for demo */
+}
+
+.toggle {
+  height: 65px;
+  width: 130px;
+  background: var(--foreground);
+  border-radius: 40px;
+  padding: 12px;
+  position: relative;
+  transition: background var(--transition);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.toggle::before {
+  content: "";
+  display: block;
+  height: 41px;
+  width: 41px;
+  border-radius: 30px;
+  background: var(--background);
+  position: absolute;
+  z-index: 2;
+  transform: translate(0);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.toggle.enabled::before {
+  transform: translateX(65px);
+}
+
+.toggle input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.toggle .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.toggle .icons svg {
+  fill: var(--background);
+  stroke: var(--background);
+  height: 30px;
+  width: 30px;
+  z-index: 0;
 }
